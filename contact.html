@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ThreadCrafters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+    header {
+        background-color: #ff7e5f;
+        padding: 20px 0;
+        text-align: center;
+    }
+    header .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        padding: 8px 15px;
+        transition: background-color 0.3s ease;
+    }
+    nav ul li a:hover {
+        background-color: #feb47b;
+        border-radius: 5px;
+    }
+    section {
+        padding: 80px 20px;
+        text-align: center;
+        background-color: #ffffff;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    section h1 {
+        font-size: 2.8rem;
+        color: #ff7e5f;
+        margin-bottom: 60px;
+        font-weight: bold;
+        border-bottom: 3px solid #ff7e5f;
+        padding-bottom: 10px;
+    }
+    section p {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    form.container {
+        max-width: 600px;
+        width: 100%;
+        text-align: left;
+    }
+    form .form-group {
+        margin-bottom: 20px;
+    }
+    form .form-label {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #555;
+    }
+    form .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+    form .form-control:focus {
+        border-color: #ff7e5f;
+    }
+    form .btn {
+        display: inline-block;
+        background-color: #ff7e5f;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    form .btn:hover {
+        background-color: #feb47b;
+    }
+    footer {
+        background-color: #343a40;
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+        margin-top: auto;
+    }
+    footer nav ul {
+        text-align: center;
+        padding: 0;
+    }
+    footer nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+    footer nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.1rem;
+    }
+    footer p {
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+
+    /*mobile responsiveness */
+    @media (max-width: 768px) {
+        header .logo {
+            font-size: 1.5rem;
+        }
+        nav ul li {
+            display: block;
+            margin: 10px 0;
+        }
+        section {
+            padding: 60px 20px;
+        }
+        section h1 {
+            font-size: 2.5rem;
+        }
+        section p {
+            font-size: 1rem;
+            max-width: 100%;
+        }
+        form.container {
+            max-width: 100%;
+        }
+        footer nav ul li {
+            display: block;
+            margin: 10px 0;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+    }
+    /*extra small devices */
+    @media (max-width: 480px) {
+        section {
+            padding: 40px 20px;
+        }
+        section h1 {
+            font-size: 2rem;
+        }
+        section p {
+            font-size: 0.95rem;
+        }
+        footer p {
+            font-size: 0.8rem;
+        }
+    }
+</style>
+<body>
+    <!--Header-->
+    <header>
+        <div class="logo">ThreadCrafters</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Contact Form Section-->
+    <section>
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feel free to reach out to us!</p>
+
+        <!--contact Form -->
+        <form class="container">
+            <div class="form-group">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required placeholder="Your full name">
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required placeholder="Your email address">
+            </div>
+            <div class="form-group">
+                <label for="phone" class="form-label">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Your phone number" pattern="^\d{10}$" title="Phone number should be 10 digits">
+            </div>
+            <div class="form-group">
+                <label for="order" class="form-label">Order ID Number:</label>
+                <input type="text" id="order" name="order" class="form-control" placeholder="Your order number">
+            </div>
+            <div class="form-group">
+                <label for="message" class="form-label">Message:</label>
+                <textarea id="message" name="message" class="form-control" required placeholder="Write your message here"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="attachment" class="form-label">Attachment (JPG, JPEG, or PDF):</label>
+                <input type="file" id="attachment" name="attachment" class="form-control" accept=".jpg, .jpeg, .pdf">
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form> <br>       
+        <p>If you prefer, mail us us directly at <a href="mailto:support@threadcrafters.com">support@threadcrafters.com</a>.</p>
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="return-exchange-policy.html">Returns and Exchange Policy</a></li>
+                <li><a href="about.html">About Us</a></li>
+
+            </ul>
+        </nav>
+        <p>&copy; 2022 ThreadCrafters. All rights reserved.</p>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

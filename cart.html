@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<style>
+    body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f3f9f9, #e0f7fa);
+    }
+    header {
+        background: linear-gradient(135deg, #4CAF50, #6bbf59);
+        color: white;
+        padding: 1em;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.3s ease;
+    }
+    header:hover {
+        background: linear-gradient(135deg, #45a049, #5eae4f);
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+    .back-to-shop {
+        position: absolute;
+        top: 50%;
+        left: 1em;
+        transform: translateY(-50%);
+        color: white;
+        text-decoration: none;
+        font-size: 1.25em;
+        font-weight: normal;
+        transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    .back-to-shop:hover {
+        transform: translateY(-50%) scale(1.1);
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        padding: 0.2em 0.5em;
+    }
+    /*Cart Container*/
+    .cart-container {
+        max-width: 900px;
+        margin: 1em auto;
+        padding: 1.5em;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .cart-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    /*cart items*/
+    .cart-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5em;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 1em;
+        transition: background-color 0.3s ease;
+    }
+    .cart-item:hover {
+        background: #f1f8f4;
+    }
+    .cart-item:last-child {
+        border-bottom: none;
+    }
+    /*Item image*/
+    .cart-item-image {
+        width: 100px;
+        height: 140px;
+        object-fit: cover;
+        margin-right: 1.2em;
+        margin-left: 5em;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    .cart-item-image:hover {
+        transform: scale(1.05);
+    }
+    /*Item details */
+    .cart-item-details {
+        flex: 1;
+    }
+    .cart-item-details h3 {
+        margin: 0 0 0.5em;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+    .cart-item-details p {
+        margin: 0.5em 0;
+        font-size: 0.95em;
+        color: #555;
+    }
+    /*quantity buttons */
+    .quantity-btn {
+        background: linear-gradient(135deg, #4CAF50, #6bbf59);
+        color: white;
+        border: none;
+        padding: 0.4em 0.8em;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 0 0.5em;
+        transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    .quantity-btn:hover {
+        transform: scale(1.1);
+        background: linear-gradient(135deg, #45a049, #5eae4f);
+    }
+    /*remove button */
+    .remove-btn {
+        background: linear-gradient(135deg, #f44336, #fc665e);
+        color: white;
+        border: none;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 3em;
+        font-size: 0.9em;
+        transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    .remove-btn:hover {
+        transform: scale(1.05);
+        background: linear-gradient(135deg, #e53935, #f66a6c);
+    }
+    /*cart summary section */
+    .cart-summary {
+        max-width: 900px;
+        margin: 1em auto;
+        padding: 1.5em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+    .cart-summary:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    /*total price*/
+    .cart-summary h3 {
+        margin: 0;
+        font-size: 1.5em;
+        margin-right: 1.5em;
+        color: #333;
+    }
+    /*checkout button */
+    .checkout-btn {
+        background: linear-gradient(135deg, #4CAF50, #6bbf59);
+        color: white;
+        padding: 0.8em 1.5em;
+        font-size: 1.1em;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    .checkout-btn:hover {
+        transform: scale(1.05);
+        background: linear-gradient(135deg, #45a049, #5eae4f);
+    }
+    /*mobile responsiveness */
+    @media (max-width: 768px) {
+        .cart-container {
+            padding: 1em;
+        }
+        .cart-item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .cart-item-image {
+            margin: 0 0 1em;
+        }
+        .cart-summary {
+            flex-direction: column;
+            align-items: stretch;
+            text-align: center;
+        }
+        .cart-summary h3 {
+            margin-bottom: 1em;
+        }
+    }
+</style>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+        <a href="shop.html" class="back-to-shop">Back to Shop</a>
+    </header>
+    <main>
+        <!--cart items will be dynamically injected here-->
+        <div id="cartContainer"></div>
+    
+        <!--cart total and checkout button -->
+        <div class="cart-summary">
+            <h3>Total: <span id="cartTotal">0</span></h3>
+            <a  class="checkout-btn">Proceed to Checkout</a>
+        </div>
+    </main>
+    
+    <script src="cart.js"></script>
+</body>
+</html>

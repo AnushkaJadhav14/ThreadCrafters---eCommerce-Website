@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes">
+    <title>Home - ThreadCrafters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+header {
+    background-color: #ff7e5f;
+    padding: 20px 0;
+    text-align: center;
+}
+header .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+nav ul li a:hover {
+    background-color: #feb47b;
+    border-radius: 5px;
+}
+.about-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+.about-section h1 {
+    font-size: 2.8rem;
+    color: #ff7e5f;
+    margin-bottom: 60px;
+    font-weight: bold;
+    border-bottom: 3px solid #ff7e5f; 
+    padding-bottom: 10px;
+}
+.about-section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: auto;
+}
+footer nav ul {
+    text-align: center;
+    padding: 0;
+}
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+footer nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+footer p {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+/*mobile responsiveness */
+@media (max-width: 768px) {
+    header .logo {
+        font-size: 1.5rem;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .about-section {
+        padding: 60px 20px;
+    }
+    .about-section h1 {
+        font-size: 2.5rem;
+    }
+    .about-section p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+    footer nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+/*extrasmall devices*/
+@media (max-width: 480px) {
+    .about-section {
+        padding: 40px 20px;
+    }
+    .about-section h1 {
+        font-size: 2rem;
+    }
+    .about-section p {
+        font-size: 0.95rem;
+    }
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+</style>
+<body>
+    
+    <header>
+        <div class="logo">ThreadCrafters</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h1>About ThreadCrafters</h1>
+        <p>We create beautiful, handcrafted traditional attires that combine traditional skills with modern style. Each piece is made with love using eco-friendly materials. Whether you're searching for a unique gift or a stylish new addition to your wardrobe, our collection has something special for everyone. Discover the joy of traditional handmade fashion at ThreadCrafters!</p>
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="home.html">Home</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2022 ThreadCrafters. All rights reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
