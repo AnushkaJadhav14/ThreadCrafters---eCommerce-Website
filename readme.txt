@@ -3,7 +3,7 @@ ThreadCrafters E-Commerce Website
 
 Project Overview:
 -----------------
-ThreadCrafters is an eCommerce website dedicated to selling stitched traditional attires. The website offers a variety of products categorized for men, women, boys, and girls. It features user-friendly navigation, a secure cart system, and detailed policy pages.
+ThreadCrafters is a Front-End eCommerce website dedicated to selling stitched traditional attires. The website offers a variety of products categorized for men, women, boys, and girls. It features user-friendly navigation, a secure cart system, and detailed policy pages.
 
 Folder Structure:
 -----------------
